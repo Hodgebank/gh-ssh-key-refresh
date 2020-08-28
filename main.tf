@@ -4,6 +4,7 @@ locals {
   ssm_param_name_gh_rsa = "/global/gh-${local.gh_user}-rsa"
   environment           = var.environment
   gh_base_url           = var.gh_base_url
+  aws_region            = var.aws_region
 }
 
 # short-lived keypair
