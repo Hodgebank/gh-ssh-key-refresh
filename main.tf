@@ -25,6 +25,6 @@ resource "aws_ssm_parameter" "private_key" {
 
 # short-lived public key
 resource "github_user_ssh_key" "pub_key" {
-  title = "gh-${local.gh_user}-${environment}-rsa"
+  title = "gh-${local.gh_user}-${local.environment}-rsa"
   key   = tls_private_key.private_key.public_key_openssh
 }
