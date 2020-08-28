@@ -10,6 +10,10 @@ locals {
 # short-lived keypair
 resource "tls_private_key" "private_key" {
 
+  triggers = {
+    build_number = "${timestamp()}"
+  }
+
   algorithm = "RSA"
   rsa_bits  = 4096
 }
