@@ -10,10 +10,6 @@ provider "aws" {
 
 provider "github" {
   base_url   = local.gh_base_url
-  token      = data.aws_ssm_parameter.gh_pat.value
+  token      = local.gh_pat
   individual = true
-}
-
-data "aws_ssm_parameter" "gh_pat" {
-  name = local.ssm_param_name_gh_pat
 }

@@ -1,5 +1,6 @@
 locals {
   gh_user               = var.gh_user
+  gh_pat                = var.gh_pat
   ssm_param_name_gh_pat = "/global/gh-${local.gh_user}-pat"
   ssm_param_name_gh_rsa = "/global/gh-${local.gh_user}-rsa"
   environment           = var.environment
