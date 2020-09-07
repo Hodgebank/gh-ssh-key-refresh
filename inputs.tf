@@ -3,7 +3,7 @@ variable "gh_user" {
 }
 
 variable "gh_pat" {
-  description = "Github personal access token
+  description = "Github personal access token"
 }
 
 variable "gh_base_url" {
