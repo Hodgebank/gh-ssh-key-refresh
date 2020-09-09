@@ -12,4 +12,5 @@ provider "github" {
   base_url   = local.gh_base_url
   token      = local.gh_pat
   individual = true
+  version    = "= 2.9.2" # intentional set version as 3.0.0 breaks use of individual attribute, haven't found the reason for deprecating this yet
 }
